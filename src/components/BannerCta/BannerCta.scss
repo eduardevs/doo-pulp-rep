@@ -1,0 +1,22 @@
+@import "../../assets/styles/index.scss";
+
+.banner-cta {
+  // ! fix size the img bg-banner have to pass the color bg-background
+  // height: 50vh;
+  background-color: $tertiary;
+
+  .title {
+    color: $primary-dark;
+  }
+
+  .bg-banner {
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 65vw;
+      // ! border-radius effect undesired,
+      border-radius: 2%;
+    }
+  }
+}

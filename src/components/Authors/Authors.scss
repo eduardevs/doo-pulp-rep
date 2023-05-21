@@ -1,0 +1,20 @@
+.img-profile {
+  border-radius: 10%;
+  width: 20vw;
+}
+
+@media (max-width: "991px") {
+  .img-profile {
+    width: unset;
+    object-fit: fill;
+  }
+}
+
+.content {
+  .name {
+  }
+  .description {
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+}

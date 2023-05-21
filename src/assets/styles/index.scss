@@ -1,0 +1,32 @@
+@import "./fonts.scss";
+@import "./_variables.scss";
+
+body {
+  font-family: "Comfortaa", "sans-serif";
+}
+
+.bd-tertiary {
+  background-color: $tertiary;
+}
+.bd-secondary {
+  background-color: $secondary;
+}
+.bd-primary {
+  background-color: $primary;
+}
+
+.color-primary {
+  color: $primary;
+}
+
+.color-secondary {
+  color: $secondary;
+}
+
+.color-tertiary {
+  color: $tertiary;
+}
+
+.font-serif {
+  font-family: 'Times New Roman', Times, serif;
+}

@@ -1,0 +1,90 @@
+@import "../../assets/styles/index.scss";
+
+a.nav-link {
+  color: #000000;
+  font-weight: bold;
+  &:hover {
+    color: $primary;
+  }
+}
+
+.navbar {
+  height: 200px;
+
+  .navbar-toggler {
+    z-index: 1;
+    position: absolute;
+    margin: 0 auto;
+    right: 130px;
+  }
+
+  .logo {
+    width: 80%;
+  }
+  .menu {
+    // display: flex;
+    justify-content: center;
+    // color: #000000;
+
+    ul {
+      color: #000000;
+      text-shadow: 1px 1px 2px black;
+    }
+
+    .btn-cta {
+      transform: translate(-50%, 0);
+      position: absolute;
+      left: 50%;
+      width: 200px;
+      height: 50px;
+      border-radius: 15px;
+      align-items: center;
+      justify-content: center;
+      background-color: $primary;
+      border-color: unset;
+
+      &:hover {
+        background-color: $primary-dark;
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    .menu {
+      top: 100px;
+      position: relative;
+      background: white;
+      width: 100%;
+      ul li,
+      .block-cta {
+        border: 1px solid black;
+        margin-left: 0 !important;
+      }
+      .btn-cta {
+        transform: translate(-44%, -100%);
+      }
+    }
+  }
+  .menu.navbar-collapse {
+    // position: fixed;
+    top: 100px;
+    left: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+  }
+
+  .menu.navbar-collapse.collapsing {
+    top: -75%;
+    transition: height 0s ease;
+  }
+
+  .menu.navbar-collapse.show {
+    top: 0;
+    transition: all 300ms ease-in-out;
+  }
+
+  .menu.navbar-toggler.collapsed ~ .navbar-collapse {
+    transition: all 500ms ease-in-out;
+  }
+}
