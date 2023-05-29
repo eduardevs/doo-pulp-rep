@@ -1,18 +1,18 @@
 .img-profile {
   border-radius: 10%;
-  width: 20vw;
+  width: 54%;
 }
 
-@media (max-width: "991px") {
+@media (max-width: "768px") {
   .img-profile {
-    width: unset;
+    width: 44%;
     object-fit: fill;
   }
 }
 
 .content {
-  .name {
-  }
+  // .name {
+  // }
   .description {
     font-weight: 700;
     font-size: 1.2rem;

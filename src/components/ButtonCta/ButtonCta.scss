@@ -1,0 +1,32 @@
+@import "../../assets/styles/index.scss";
+
+.btn-cta {
+  transform: translate(-50%, 0);
+  position: absolute;
+  left: 50%;
+  width: 200px;
+  height: 50px;
+  border-radius: 15px;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary;
+  border-color: unset;
+
+  &:hover {
+    background-color: $primary-dark;
+  }
+}
+
+.cta-mobile {
+  font-size: 1.8rem !important;
+}
+
+@media (max-width: 991px) {
+  .block-cta {
+    // border: 1px solid black;
+    margin-left: 0 !important;
+  }
+  .btn-cta {
+    transform: translate(-44%, -100%);
+  }
+}

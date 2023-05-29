@@ -5,15 +5,11 @@
 }
 // ! ADD EFFECT HERE TO THE BOX
 .principleBox {
-  color: $alternative;
+  color: #fff;
   background-color: $secondary;
   height: 140px;
   width: 100%;
   align-items: center;
   display: flex;
   justify-content: center;
-}
-
-.color-secondary {
-  color: $secondary;
 }

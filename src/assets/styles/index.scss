@@ -1,4 +1,4 @@
-@import "./fonts.scss";
+@import "./fonts/fonts.scss";
 @import "./_variables.scss";
 
 body {
@@ -28,5 +28,7 @@ body {
 }
 
 .font-serif {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Roboto", serif;
 }
+
+

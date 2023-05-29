@@ -44,17 +44,17 @@ export const Sponsors = ({ ...props }) => {
   const sponsors =
     data &&
     data.map((sponsor) => (
-      <div className="col-6 col-md-4">
-        <img src={sponsor.img} alt={sponsor.name} />
+      <div className="col-12 col-md-6 col-lg-4 justify-content-center d-flex mt-5">
+        <img src={sponsor.img} className="" alt={sponsor.name} />
       </div>
     ));
 
   return (
-    <div className={`container-fluid p-5`}>
+    <div className={`container-fluid p-5 container`}>
       <div className="text-center">
         <h2 className="title">{title}</h2>
       </div>
-      <div className="row mt-5">{sponsors}</div>
+      <div className="row mt-5 justify-content-around">{sponsors}</div>
     </div>
   );
 };

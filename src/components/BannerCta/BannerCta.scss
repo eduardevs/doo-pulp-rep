@@ -1,22 +1,51 @@
 @import "../../assets/styles/index.scss";
+//
+#bannerCta {
+  margin-bottom: -300px;
 
-.banner-cta {
-  // ! fix size the img bg-banner have to pass the color bg-background
-  // height: 50vh;
-  background-color: $tertiary;
-
-  .title {
-    color: $primary-dark;
+  .banner-cta {
+    // ! fix size the img bg-banner have to pass the color bg-backgroud
+    height: 380px;
+    background-color: $tertiary;
   }
 
-  .bg-banner {
-    display: flex;
-    justify-content: center;
+  .block-banner {
+    top: -350px;
+    .title {
+      color: $primary-dark;
+    }
 
-    img {
-      width: 65vw;
-      // ! border-radius effect undesired,
-      border-radius: 2%;
+    .bg-banner {
+      display: flex;
+      justify-content: center;
+
+      img.bg-img {
+        width: 70vw;
+        border-radius: 30px;
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    .banner-cta {
+      padding-top: 120px;
+    }
+    #bannerCta {
+      margin-top: 100px;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  // .container-fluid {
+
+  // }
+  #bannerCta .block-banner {
+    .bg-banner {
+      img.bg-img {
+        width: 100vw;
+        border-radius: 0px;
+      }
     }
   }
 }

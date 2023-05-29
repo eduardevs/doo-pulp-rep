@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "Comfortaa";
+  src: url(./Comfortaa/Comfortaa-Light.otf) format("otf"),
+    url(./Comfortaa/Comfortaa-Light.ttf) format("truetype"),
+    url(./Comfortaa/Comfortaa-Light.woff) format("woff"),
+    url(./Comfortaa/Comfortaa-Light.woff2) format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Comfortaa";
+  src: url(./Comfortaa/Comfortaa-Medium.woff) format("woff"),
+    url(./Comfortaa/Comfortaa-Medium.woff2) format("woff2"),
+    url(./Comfortaa/Comfortaa-Medium.otf) format("otf"),
+    url(./Comfortaa/Comfortaa-Medium.ttf) format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Comfortaa";
+  src: url(./Comfortaa/Comfortaa-Regular.otf) format("otf"),
+    url(./Comfortaa/Comfortaa-Regular.ttf) format("ttf"),
+    url(./Comfortaa/Comfortaa-Regular.woff) format("woff"),
+    url(./Comfortaa/Comfortaa-Regular.woff2) format("woff2");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Comfortaa";
+  src: url(./Comfortaa/Comfortaa-SemiBold.woff) format("woff"),
+    url(./Comfortaa/Comfortaa-SemiBold.woff2) format("woff2"),
+    url(./Comfortaa/Comfortaa-SemiBold.ttf) format("truetype"),
+    url(./Comfortaa/Comfortaa-SemiBold.otf) format("otf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Comfortaa";
+  src: url(./Comfortaa/Comfortaa-Bold.otf) format("otf"),
+    url(./Comfortaa/Comfortaa-Bold.ttf) format("ttf"),
+    url(./Comfortaa/Comfortaa-Bold.woff) format("woff"),
+    url(./Comfortaa/Comfortaa-Bold.woff2) format("woff2");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "FauneFont";
+  src: url(./Faune/Faune-Display_Black.svg) format("svg"),
+    url(./Faune/Faune-Display_Bold_Italic.svg) format("svg"),
+    url(./Faune/Faune-Display_Thin.svg) format("svg"),
+    url(./Faune/Faune-Text_Bold.svg) format("svg"),
+    url(./Faune/Faune-Text_Italic.svg) format("svg"),
+    url(./Faune/Faune-Text_Regular.svg) format("svg");
+  font-weight: 700;
+}
+

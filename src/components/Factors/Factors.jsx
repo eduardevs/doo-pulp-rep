@@ -1,4 +1,4 @@
-// import "./Authors.scss";
+import "./Factors.scss";
 import { useState } from "react";
 
 export const Factors = ({ data, title, ...props }) => {
@@ -6,23 +6,25 @@ export const Factors = ({ data, title, ...props }) => {
     data.filter((fact, index, array) => index === array.length - 1)
   );
   // const [lastItemObj, setLastItemObj] = useState(...lastItem);
-  const copyLastItem = { ...lastItem };
-  console.log(copyLastItem);
-  console.log(lastItem[0].title, lastItem[0].descriptions[0]);
+  // const copyLastItem = { ...lastItem };
+  // console.log(copyLastItem);
+  // console.log(lastItem[0].title, lastItem[0].descriptions[0]);
 
   const factDivs =
     data &&
     data.map((fact, index, array) => (
       <div className="row">
         {fact.img && (
-          <div className={`order-${index == 0 ? 1 : 0} col-md-6`}>
-            <img className="img-fluid" src={fact.img} />
+          <div
+            className={`order-1 order-lg-${index == 0 ? 1 : 0} col-12 col-lg-6`}
+          >
+            <img className="img-fluid w-80" src={fact.img} />
           </div>
         )}
         <div
-          className={`order-${index} ${
-            index === array.length - 1 ? "last-item" : "col-md-6"
-          } `}
+          className={`order-lg-${index} ${
+            index === array.length - 1 ? "" : "col-12 col-lg-6"
+          } p-5`}
         >
           {index !== array.length - 1 && (
             <li className="">
@@ -34,7 +36,7 @@ export const Factors = ({ data, title, ...props }) => {
             </li>
           )}
           {index === array.length - 2 && (
-            <li className="">
+            <li className=" mt-5">
               <h2>{lastItem[0].title}</h2>
               {lastItem[0].descriptions.map((li, i, arr) => (
                 <div className="fw-bold fs-5">{li}</div>
@@ -45,11 +47,13 @@ export const Factors = ({ data, title, ...props }) => {
       </div>
     ));
   return (
-    <div className="container-fluid bd-tertiary p-5">
-      <div>
-        <h1>{title}</h1>
+    <div className="container-fluid bd-tertiary p-5" id="facts">
+      <div className="container">
+        <div className="mb-5">
+          <h1 className="title fs-1">{title}</h1>
+        </div>
+        {factDivs && <ul className="">{factDivs}</ul>}
       </div>
-      {factDivs && <ul className="">{factDivs}</ul>}
     </div>
   );
 };

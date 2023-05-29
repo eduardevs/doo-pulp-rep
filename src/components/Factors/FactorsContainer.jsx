@@ -1,8 +1,8 @@
 // import "./Authors.scss";
 
 import { Factors } from "./Factors";
-import Environment from "../../assets/images/tree-branch.jpg";
-import Social from "../../assets/images/tree-branch.jpg";
+import Environment from "../../assets/images/nature-path.jpg";
+import Social from "../../assets/images/france-flag.jpg";
 
 export const FactorsContainer = () => {
   const facts = [
@@ -30,5 +30,10 @@ export const FactorsContainer = () => {
     },
   ];
 
-  return <Factors data={[...facts]} title="Comment le projet Doo pourra générer de l'impact positif ?" />;
+  return (
+    <Factors
+      data={[...facts]}
+      title="Comment le projet Doo pourra générer de l'impact positif ?"
+    />
+  );
 };

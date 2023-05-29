@@ -13,9 +13,9 @@ export const Values = ({
   let [isList, setIsList] = useState(withList ? true : false);
 
   const principlesT = principles.map((principle) => (
-    <div className="col-lg-4 col-md-6 col-12 text-center d-flex">
+    <div className="col-lg-4 col-md-6 col-12 mt-3 text-center d-flex">
       <div
-        className={`container-fluid p-5 ${
+        className={`container-fluid container p-5 ${
           !isList ? "bg-tertiary principleBox" : "fs-4 color-secondary"
         }`}
       >
@@ -32,16 +32,17 @@ export const Values = ({
 
   return (
     <div className={`container-fluid p-5 ${isBg ? "" : "bd-tertiary"}`}>
-      <div className="text-center">
-        <h2 className="title">{title}</h2>
-      </div>
-      <div className="row mt-5">{principlesT}</div>
-      {extraText && (
-        <div className="bold fs-4 text-center color-secondary">
-          {" "}
-          {extraText}{" "}
+      <div className="container">
+        <div className="text-center">
+          <h2 className="title">{title}</h2>
         </div>
-      )}
+        <div className="row mt-5">{principlesT}</div>
+        {extraText && (
+          <div className="bold fs-4 text-center color-secondary">
+            {extraText}
+          </div>
+        )}
+      </div>
     </div>
   );
 };
