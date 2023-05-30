@@ -1,5 +1,7 @@
 import "./Factors.scss";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export const Factors = ({ data, title, ...props }) => {
   const [lastItem, setLastItem] = useState(
@@ -9,6 +11,9 @@ export const Factors = ({ data, title, ...props }) => {
   // const copyLastItem = { ...lastItem };
   // console.log(copyLastItem);
   // console.log(lastItem[0].title, lastItem[0].descriptions[0]);
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
 
   const factDivs =
     data &&
@@ -27,7 +32,7 @@ export const Factors = ({ data, title, ...props }) => {
           } p-5`}
         >
           {index !== array.length - 1 && (
-            <li className="">
+            <li data-aos="fade-right" className="">
               <h2>{index !== array.length - 1 && fact.title}</h2>
               {index !== array.length - 1 &&
                 fact.descriptions.map((li, i, arr) => (
@@ -36,7 +41,7 @@ export const Factors = ({ data, title, ...props }) => {
             </li>
           )}
           {index === array.length - 2 && (
-            <li className=" mt-5">
+            <li data-aos="fade-right" className=" mt-5">
               <h2>{lastItem[0].title}</h2>
               {lastItem[0].descriptions.map((li, i, arr) => (
                 <div className="fw-bold fs-5">{li}</div>

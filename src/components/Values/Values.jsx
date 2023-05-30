@@ -1,5 +1,7 @@
-import { useState } from "react";
 import "./Values.scss";
+import { useState, useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export const Values = ({
   principles,
@@ -12,6 +14,11 @@ export const Values = ({
   let [isBg, setIsBg] = useState(withBgColor ? true : false);
   let [isList, setIsList] = useState(withList ? true : false);
 
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
+
   const principlesT = principles.map((principle) => (
     <div className="col-lg-4 col-md-6 col-12 mt-3 text-center d-flex">
       <div
@@ -21,7 +28,7 @@ export const Values = ({
       >
         {isList ? (
           <ul className="text-bold">
-            <li>{principle}</li>
+            <li data-aos="fade-right">{principle}</li>
           </ul>
         ) : (
           <h4>{principle}</h4>

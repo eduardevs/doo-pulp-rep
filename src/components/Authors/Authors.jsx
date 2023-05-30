@@ -1,7 +1,13 @@
 import "./Authors.scss";
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export const Authors = ({ data, title, ...props }) => {
   // console.log(typeof authorsProps);
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
 
   const authors = data.map((author) => {
     return (
@@ -11,7 +17,7 @@ export const Authors = ({ data, title, ...props }) => {
             <img className="img-fluid img-profile" src={author.img} />
           )}
         </div>
-        <div className="col-lg-6 col-12 mt-4 content">
+        <div data-aos="fade-right" className="col-lg-6 col-12 mt-4 content">
           <h3 className="name title fs-2">{author.name}</h3>
           <p className="description">{author.description}</p>
         </div>
