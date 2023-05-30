@@ -10,45 +10,9 @@ import { Footer } from "../components/Footer/Footer";
 import { NavBarContainer } from "../components/NavBar/NavBarContainer";
 import { useRef, useEffect } from "react";
 import "./HomePage.scss";
+import { Section } from "../Layouts/Section";
 
 export const HomePage = () => {
-  // effects
-  // const sectionRef1 = useRef();
-  // const sectionRef2 = useRef();
-  // const sectionRef3 = useRef();
-  // const sectionRef4 = useRef();
-  // const sectionRef5 = useRef();
-  // const sectionRef6 = useRef();
-  // const sectionRef7 = useRef();
-  // const sectionRef8 = useRef();
-
-  // useEffect(() => {
-  //   observerRef(sectionRef1);
-  //   observerRef(sectionRef2);
-  //   observerRef(sectionRef3);
-  //   observerRef(sectionRef4);
-  //   observerRef(sectionRef5);
-  //   observerRef(sectionRef6);
-  //   observerRef(sectionRef7);
-  //   observerRef(sectionRef8);
-
-  //   // const hiddenElements =
-  //   // console.log(sectionRef);
-  // }, []);
-  // const observerRef = (referenceItem) => {
-  //   const observer = new IntersectionObserver((entries) => {
-  //     // entries.forEach((entry) => {
-  //     if (entries[0].isIntersecting) {
-  //       referenceItem.current.classList.add("active");
-  //       observer.unobserve(referenceItem.current);
-  //     }
-  //     // else {
-  //     //   entry.current.classList.remove("active");
-  //     // }
-  //     // });
-  //   });
-  //   observer.observe(referenceItem.current);
-  // };
   //Passer ceci dans un container
   const valuesPropsTwo = [
     "Ecologie",
@@ -63,24 +27,22 @@ export const HomePage = () => {
   ];
 
   return (
-    <>
+    <div className="grids">
       <NavBarContainer />
-      <section className="section">
-        {/* <section ref={sectionRef1} className="section"> */}
-
+      <Section effect="fade-up">
         <BannerCta />
-      </section>
-      <section className="section">
+      </Section>
+      <Section effect="fade-right">
         <Numbers />
-      </section>
-      <section className="section">
+      </Section>
+      <Section>
         <About
           subtitle="La pâte à papier"
           subtitle2=" en fibres végétales alternatives"
           title="Doo Pulp"
         />
-      </section>
-      <section className="section">
+      </Section>
+      <Section>
         <Values
           principles={valuesProps}
           title="Les objectifs du projet"
@@ -88,20 +50,20 @@ export const HomePage = () => {
           withList={true}
           extraText={"et... Sauver nos forêts!"}
         />
-      </section>
-      <section className="section">
+      </Section>
+      <Section>
         <FactorsContainer />
-      </section>
-      <section className="section">
+      </Section>
+      <Section>
         <AuthorsContainer />
-      </section>
-      <section className="section">
+      </Section>
+      <Section>
         <Values principles={valuesPropsTwo} title="Nos valeurs" />
-      </section>
-      <section className="section">
+      </Section>
+      <Section>
         <Sponsors />
-      </section>
+      </Section>
       <Footer />
-    </>
+    </div>
   );
 };
