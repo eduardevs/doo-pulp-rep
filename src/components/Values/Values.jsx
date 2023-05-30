@@ -20,7 +20,7 @@ export const Values = ({
         }`}
       >
         {isList ? (
-          <ul>
+          <ul className="text-bold">
             <li>{principle}</li>
           </ul>
         ) : (
@@ -38,7 +38,7 @@ export const Values = ({
         </div>
         <div className="row mt-5">{principlesT}</div>
         {extraText && (
-          <div className="bold fs-4 text-center color-secondary">
+          <div className="text-bold fs-4 text-center color-secondary">
             {extraText}
           </div>
         )}

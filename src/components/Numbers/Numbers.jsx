@@ -105,10 +105,8 @@ export const Numbers = ({ ...props }) => {
               data-val={numbers}
               ref={myRef}
             >
-              {/* ! TODO: EFFECT DE 000 A 220 */}
               000
             </span>
-            {/* .000 */}
             <div className="text-black text-numbers fs-1">{textLeft}</div>
           </div>
         </div>
