@@ -1,0 +1,28 @@
+@import "../../../assets/styles/index.scss";
+
+.btn-up {
+  background-color: $primary;
+  //   position: fixed;
+  //   float: left;
+  // bottom: 20px;
+  //   right: 0px;
+  position: fixed;
+  //   background: red;
+  bottom: 159px;
+  right: 73px;
+  // display: none;
+}
+
+// .btn-up:before {
+//   content:">";
+//   display: inline-block;
+//   -webkit-transform: rotate(-90deg);
+//   -moz-transform: rotate(-90deg);
+//   -o-transform: rotate(-90deg);
+//   transform: rotate(-90deg);
+//   // transform: rotate(40deg);
+//   font-size: 30px;
+//   font-weight: bold;
+//   padding-left:5px;
+//   color: $tertiary;
+// }

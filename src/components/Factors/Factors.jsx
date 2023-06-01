@@ -52,7 +52,7 @@ export const Factors = ({ data, title, ...props }) => {
       </div>
     ));
   return (
-    <div className="container-fluid bd-tertiary p-5" id="facts">
+    <div className="container-fluid bd-tertiary p-5">
       <div className="container">
         <div className="mb-5">
           <h1 className="title fs-1">{title}</h1>

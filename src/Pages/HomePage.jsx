@@ -1,4 +1,3 @@
-import { NavBarMobile } from "../components/NavBar/NavBarMobile";
 import { BannerCta } from "../components/BannerCta/BannerCta";
 import { Values } from "../components/Values/Values";
 import { AuthorsContainer } from "../components/Authors/AuthorsContainer";
@@ -8,12 +7,11 @@ import { FactorsContainer } from "../components/Factors/FactorsContainer";
 import { Sponsors } from "../components/Sponsors/Sponsors";
 import { Footer } from "../components/Footer/Footer";
 import { NavBarContainer } from "../components/NavBar/NavBarContainer";
-import { useRef, useEffect } from "react";
 import "./HomePage.scss";
 import { Section } from "../Layouts/Section";
+import { ButtonUp } from "../components/Buttons/ButtonUp/ButtonUp";
 
 export const HomePage = () => {
-  //Passer ceci dans un container
   const valuesPropsTwo = [
     "Ecologie",
     "Economie Circulaire et Locale",
@@ -27,22 +25,22 @@ export const HomePage = () => {
   ];
 
   return (
-    <div className="grids">
+    <div className="grids" id="homepage">
       <NavBarContainer />
-      <Section effect="fade-up">
+      <Section effect="fade-right" id="bannerCta">
         <BannerCta />
       </Section>
-      <Section effect="fade-right">
+      <Section effect="fade-right" id="numbers">
         <Numbers />
       </Section>
-      <Section>
+      <Section id="about">
         <About
           subtitle="La pâte à papier"
           subtitle2=" en fibres végétales alternatives"
           title="Doo Pulp"
         />
       </Section>
-      <Section>
+      <Section id="goals">
         <Values
           principles={valuesProps}
           title="Les objectifs du projet"
@@ -51,18 +49,21 @@ export const HomePage = () => {
           extraText={"et... Sauver nos forêts!"}
         />
       </Section>
-      <Section>
+      <Section id="facts">
         <FactorsContainer />
       </Section>
-      <Section>
+      <Section id="authors">
         <AuthorsContainer />
       </Section>
-      <Section>
+      <Section id="values">
         <Values principles={valuesPropsTwo} title="Nos valeurs" />
       </Section>
-      <Section>
+      <Section id="sponsors">
         <Sponsors />
       </Section>
+      <div className="w-100">
+        <ButtonUp />
+      </div>
       <Footer />
     </div>
   );

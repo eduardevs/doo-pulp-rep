@@ -18,7 +18,6 @@ export const Values = ({
     Aos.init({ duration: 2000 });
   }, []);
 
-
   const principlesT = principles.map((principle) => (
     <div className="col-lg-4 col-md-6 col-12 mt-3 text-center d-flex">
       <div

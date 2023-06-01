@@ -1,7 +1,7 @@
 import "./NavBarMobile.scss";
 import { useState } from "react";
 import { HashLink as Link } from "react-router-hash-link";
-import { ButtonCta } from "../ButtonCta/ButtonCta";
+import { ButtonCta } from "../Buttons/ButtonCta/ButtonCta";
 import { Logo } from "../Logo/Logo";
 
 export const NavBarMobile = () => {
@@ -35,12 +35,12 @@ export const NavBarMobile = () => {
               <Link to="#about">A propos</Link>
               <div className="nav-item-wrapper"></div>
             </li>
-            <li className="nav-itm" onClick={() => setNavOpen(!navOpen)}>
+            <li className="nav-itm mb-4" onClick={() => setNavOpen(!navOpen)}>
               <Link to="#facts">Le project</Link>
 
               <div className="nav-item-wrapper"></div>
             </li>
-            <li>
+            <li className="nav-links mt-3">
               <ButtonCta
                 mobile={true}
                 text="Nous soutenir"

@@ -6,10 +6,7 @@ export const Numbers = ({ ...props }) => {
   // const numbers = "220000";
   const textLeft = "arbres sont abattus par jour.";
   // let [formatOn, setFormatOn] = useState(false);
-  let [numbers, setNumbers] = useState("220");
-  let [counterExec, setCounterExec] = useState(false);
-
-  let [scrollPosition, setScrollPosition] = useState(0);
+  let [numbers, setNumbers] = useState("270");
 
   const myRef = useRef();
   const [refNumbers, setRefNumbers] = useState();
@@ -28,11 +25,6 @@ export const Numbers = ({ ...props }) => {
     });
     observer.observe(myRef.current);
   }, []);
-
-  const handleScroll = () => {
-    const position = window.pageYOffset;
-    setScrollPosition(position);
-  };
 
   // use effects
   // useEffect(() => {
@@ -68,7 +60,7 @@ export const Numbers = ({ ...props }) => {
 
   const handleCounter = () => {
     let valueDisplays = document.querySelectorAll(".numbers");
-    let interval = 5000;
+    let interval = 3000;
     valueDisplays.forEach((valueDisplay) => {
       let startValue = 0;
       let endValue = parseInt(valueDisplay.getAttribute("data-val"));
@@ -76,7 +68,6 @@ export const Numbers = ({ ...props }) => {
       let counter = setInterval(function () {
         startValue += 1;
         valueDisplay.textContent = startValue;
-        // setFormatOn(true);
         if (startValue == endValue) {
           clearInterval(counter);
         }
@@ -84,19 +75,8 @@ export const Numbers = ({ ...props }) => {
     });
   };
 
-  // function currencyFormatDE(num) {
-  //   return (
-  //     num
-  //       .toFixed(2) // always two decimal digits
-  //       .replace(".", ",") // replace decimal point character with ,
-  //       .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.") + " €"
-  //   ); // use . as a separator
-  // }
-
-  // console.log(completeNumbers);
-
   return (
-    <div className="container-fluid p-5" id="numbers">
+    <div className="container-fluid p-5">
       <div className="row">
         <div className="col-md-6">
           <div className="bg-numbers">
@@ -104,9 +84,7 @@ export const Numbers = ({ ...props }) => {
               className="numbers text-numbers"
               data-val={numbers}
               ref={myRef}
-            >
-              000
-            </span>
+            ></span>
             <div className="text-black text-numbers fs-1">{textLeft}</div>
           </div>
         </div>

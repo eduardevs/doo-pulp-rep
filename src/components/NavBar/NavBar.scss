@@ -29,6 +29,18 @@ a.nav-link {
     ul {
       color: #000000;
       text-shadow: 1px 1px 2px black;
+
+      li.nav-item {
+        a {
+          color: black;
+          text-decoration: unset;
+          font-size: 1.1rem;
+
+          &:hover {
+            color: $primary-dark;
+          }
+        }
+      }
     }
 
     .btn-cta {
@@ -57,7 +69,7 @@ a.nav-link {
       width: 100%;
       ul li,
       .block-cta {
-        border: 1px solid black;
+        // border: 1px solid black;
         margin-left: 0 !important;
       }
       .btn-cta {

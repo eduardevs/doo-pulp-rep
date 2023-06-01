@@ -1,6 +1,7 @@
-import { ButtonCta } from "../ButtonCta/ButtonCta";
+import { ButtonCta } from "../Buttons/ButtonCta/ButtonCta";
 import { Logo } from "../Logo/Logo";
 import "./NavBar.scss";
+import { HashLink as Link } from "react-router-hash-link";
 
 export const NavBar = () => {
   return (
@@ -23,20 +24,24 @@ export const NavBar = () => {
         <div className="collapse navbar-collapse menu" id="navbarNavDropdown">
           <ul className="navbar-nav mb-4">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="about">
+              <Link to="#about">A propos</Link>
+              {/* <a className="nav-link active" aria-current="page" href="about">
                 A propos
-              </a>
+              </a> */}
             </li>
-            <li className="nav-item ms-5">
+            <li className="nav-item ms-5 mb-2">
+              <Link to="#facts">Le projet</Link>
               <a className="nav-link" href="facts">
-                Le projet
+                {/* Le projet */}
               </a>
             </li>
           </ul>
-          <ButtonCta
-            text="Nous soutenir"
-            href="https://www.kisskissbankbank.com/en/projects/doo-la-pate-a-papier-alternative-francaise"
-          />
+          <div className="mt-5">
+            <ButtonCta
+              text="Nous soutenir"
+              href="https://www.kisskissbankbank.com/en/projects/doo-la-pate-a-papier-alternative-francaise"
+            />
+          </div>
         </div>
       </div>
     </nav>

@@ -16,22 +16,20 @@ export const About = ({ data, title, subtitle, subtitle2, ...props }) => {
   ));
 
   return (
-    <div className="container-fluid p-5" id="about">
-      <div className="container">
-        <div className="row">
-          <div className="col-12 col-lg-4">
-            <Logo secondary={true} />
-          </div>
-          <div className="col-12 col-lg-6 p-3 ms-md-5">
-            <h2 className="subtitle">
-              {subtitle}
-              <span className="d-block subtitle">{subtitle2}</span>
-            </h2>
-          </div>
+    <div className="container">
+      <div className="row">
+        <div className="col-12 col-lg-4">
+          <Logo secondary={true} />
         </div>
-        <div className="card bd-primary row p-3 m-4 fs-4 bold paragraph ">
-          <p>{Content}</p>
+        <div className="col-12 col-lg-6 p-3 ms-md-5">
+          <h2 className="subtitle">
+            {subtitle}
+            <span className="d-block subtitle">{subtitle2}</span>
+          </h2>
         </div>
+      </div>
+      <div className="card bd-primary row p-3 m-4 fs-4 bold paragraph ">
+        <p>{Content}</p>
       </div>
     </div>
   );

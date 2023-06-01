@@ -26,13 +26,11 @@ export const Authors = ({ data, title, ...props }) => {
   });
 
   return (
-    <div className="container-fluid p-5">
-      <div className="container">
-        <div className="text-center m-5">
-          <h1 className="title fs-1">{title}</h1>
-        </div>
-        {authors}
+    <div className="container">
+      <div className="text-center m-5">
+        <h1 className="title fs-1">{title}</h1>
       </div>
+      {authors}
     </div>
   );
 };

@@ -4,7 +4,7 @@ import { Factors } from "./Factors";
 import Environment from "../../assets/images/nature-path.jpg";
 import Social from "../../assets/images/france-flag.jpg";
 
-export const FactorsContainer = () => {
+export const FactorsContainer = ({ ...props }) => {
   const facts = [
     {
       title: "Environnemental",
