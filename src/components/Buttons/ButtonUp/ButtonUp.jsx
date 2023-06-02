@@ -34,34 +34,19 @@ export const ButtonUp = () => {
   const [displayButton, setDisplayButton] = useState(false);
 
   useEffect(() => {
-    const handleScroll = (event) => {
-      setScrollTop(window.scrollY);
-    };
-
     window.addEventListener("scroll", handleScroll);
 
-    if (scrollTop > 400) {
-      setDisplayButton(true);
-    } else {
-      setDisplayButton(false);
-    }
-    // scrollTop >= 400 ? setDisplayButton(true) : setDisplayButton(false);
-    // ! bug il s'affiche pas le button
-    // console.log(displayButton);
+    scrollTop > 4000 ? setDisplayButton(true) : setDisplayButton(false);
 
-    if (displayButton) {
-      // handleButton();
-      // setDisplayButton(false);
-      // console.log('"teqsfdq');
-    }
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
-  // console.log(scrollTop);
+  }, [scrollTop]);
 
-  // const handleButton = () => {};
-  // console.log(displayButton);
+  const handleScroll = (event) => {
+    setScrollTop(window.scrollY);
+  };
+
   return (
     displayButton && (
       <Link

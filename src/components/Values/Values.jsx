@@ -38,7 +38,7 @@ export const Values = ({
 
   return (
     <div className={`container-fluid p-5 ${isBg ? "" : "bd-tertiary"}`}>
-      <div className="container">
+      <div className="container mt-6 mb-5">
         <div className="text-center">
           <h2 className="title">{title}</h2>
         </div>
