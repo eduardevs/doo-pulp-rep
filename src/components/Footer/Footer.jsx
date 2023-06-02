@@ -49,15 +49,15 @@ export const Footer = () => {
     <div className="container-fluid bd-tertiary">
       <div className="container">
         <div className="row p-5 mt-5">
-          <div className="col-6 col-md-4 ">
+          <div className="col-12 col-md-4 order-2 order-md-1 ms-5 ms-md-0">
             <Logo secondary={true} size="small" />
           </div>
-          <div className="col-6 col-md-4">
+          <div className="col-12 col-md-6 mt-4 mt-md-0 order-1 order-md-2">
             <h4 className="text-center color-secondary">Contact :</h4>
             <ul>
               <li className="nav-link ms-2 color-secondary text-bold">
                 <a
-                  className=" color-secondary link-social fs-6 d-flex align-items-center"
+                  className="color-secondary link-social fs-6 d-flex align-items-center"
                   href="mailto:doopapier@gmail.com"
                 >
                   <FontAwesomeIcon icon={faAddressBook} size="2x" />{" "}
