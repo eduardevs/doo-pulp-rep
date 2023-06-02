@@ -76,7 +76,7 @@ export const Numbers = ({ ...props }) => {
   };
 
   return (
-    <div className="container-fluid p-5">
+    <div className="container-fluid p-5 pt-2">
       <div className="row">
         <div className="col-md-6">
           <div className="bg-numbers">

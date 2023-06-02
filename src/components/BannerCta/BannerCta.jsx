@@ -4,7 +4,7 @@ import Background from "../../assets/images/bg-mountain.png";
 export const BannerCta = () => {
   return (
     <>
-      <div className="row bd-tertiary banner-cta h-2"></div>
+      <div className="container-fluid bd-tertiary banner-cta h-2"></div>
       <div className="position-relative block-banner text-center">
         <h1 className="title">Faisons du papier sans arbres !</h1>
         <h3>

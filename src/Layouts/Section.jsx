@@ -14,8 +14,9 @@ export const Section = ({ children, effect="fade-up", id, ...props }) => {
     <div
       data-aos={effect}
       className={`section`}
-      style={{ marginTop: marginTop }}
+      style={{ marginTop: marginTop, ...props }}
       id={id}
+      {...props}
     >
       {children}
     </div>

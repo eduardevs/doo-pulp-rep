@@ -6,7 +6,9 @@ export const Logo = ({ secondary, size, ...props }) => {
   const isImg = !secondary ? true : false;
   const text = "Doo Pulp";
   return isImg ? (
-    <img src={LogoImg} className="img-fluid w-70" />
+    <a href="https://doopulp.com">
+      <img src={LogoImg} className="img-fluid w-70" />
+    </a>
   ) : (
     <div>
       <h2

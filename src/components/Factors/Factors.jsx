@@ -18,7 +18,7 @@ export const Factors = ({ data, title, ...props }) => {
   const factDivs =
     data &&
     data.map((fact, index, array) => (
-      <div className="row">
+      <div className="row mt-6">
         {fact.img && (
           <div
             className={`order-1 order-lg-${index == 0 ? 1 : 0} col-12 col-lg-6`}
@@ -53,7 +53,7 @@ export const Factors = ({ data, title, ...props }) => {
     ));
   return (
     <div className="container-fluid bd-tertiary p-5">
-      <div className="container">
+      <div className="container mt-5">
         <div className="mb-5">
           <h1 className="title fs-1">{title}</h1>
         </div>

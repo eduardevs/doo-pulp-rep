@@ -14,30 +14,37 @@ export const Sponsors = ({ ...props }) => {
     {
       name: "enactus",
       img: sponsor1,
+      link: "https://enactus.fr/",
     },
     {
       name: "Université de Lille",
       img: sponsor2,
+      link: "https://www.univ-lille.fr/",
     },
     {
       name: "Kiss Kiss Bank Bank",
       img: sponsor3,
+      link: "https://www.kisskissbankbank.com/fr",
     },
     {
       name: "Metropole Europeenne de Lille",
       img: sponsor4,
+      link: "https://www.lillemetropole.fr/",
     },
     {
       name: "Pépite",
       img: sponsor5,
+      link: "https://pepite.univ-lille.fr",
     },
     {
       name: "IMT Nord Europe",
       img: sponsor6,
+      link: "https://imt-nord-europe.fr/",
     },
     {
       name: "IAE Lille",
       img: sponsor7,
+      link: "https://iaelille.fr/",
     },
   ];
 
@@ -45,12 +52,14 @@ export const Sponsors = ({ ...props }) => {
     data &&
     data.map((sponsor) => (
       <div className="col-12 col-md-6 col-lg-4 justify-content-center d-flex mt-5">
-        <img src={sponsor.img} className="" alt={sponsor.name} />
+        <a href={sponsor.link} target="_blank">
+          <img src={sponsor.img} className="" alt={sponsor.name} />
+        </a>
       </div>
     ));
 
   return (
-    <div className={`container-fluid p-5 container`}>
+    <div className={`container-fluid p-5 container mt-5`}>
       <div className="text-center">
         <h2 className="title">{title}</h2>
       </div>
