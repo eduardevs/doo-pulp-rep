@@ -26,7 +26,7 @@ export const Footer = () => {
   const SocialList =
     socialNetworks &&
     socialNetworks.map((social) => (
-      <li class="nav-link">
+      <li className="nav-link">
         <a href={social.link} target="_blank">
           <img src={social.img} alt={social.name} />
           <span className="color-secondary">{social.text}</span>
@@ -44,7 +44,7 @@ export const Footer = () => {
 
           <div className="col-6 col-md-4">
             <ul>
-              <li class="nav-link color-secondary text-bold">
+              <li className="nav-link color-secondary text-bold">
                 Contact : doopapier@gmail.com
               </li>
               {SocialList && SocialList}
