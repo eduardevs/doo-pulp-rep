@@ -30,7 +30,7 @@ export const Values = ({
             <li data-aos="fade-right">{principle}</li>
           </ul>
         ) : (
-          <h4>{principle}</h4>
+          <h4 data-aos="fade-right">{principle}</h4>
         )}
       </div>
     </div>
@@ -44,7 +44,10 @@ export const Values = ({
         </div>
         <div className="row mt-5">{principlesT}</div>
         {extraText && (
-          <div className="text-bold fs-4 text-center color-secondary">
+          <div
+            className="text-bold fs-4 text-center color-secondary"
+            data-aos="fade-right"
+          >
             {extraText}
           </div>
         )}

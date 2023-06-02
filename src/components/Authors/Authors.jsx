@@ -11,8 +11,14 @@ export const Authors = ({ data, title, ...props }) => {
 
   const authors = data.map((author) => {
     return (
-      <div className="row justify-content-center mb-5 pb-5 mt-6" key={author.id}>
-        <div className="col-lg-6 col-12 mt-4 d-flex justify-content-center ">
+      <div
+        className="row justify-content-center mb-5 pb-5 mt-6 p-5 p-lg-1"
+        key={author.id}
+      >
+        <div
+          data-aos="fade-right"
+          className="col-lg-6 col-12 mt-4 d-flex justify-content-center "
+        >
           {author.img && (
             <img className="img-fluid img-profile" src={author.img} />
           )}

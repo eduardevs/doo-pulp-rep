@@ -1,5 +1,6 @@
 import "./About.scss";
 import { Logo } from "../Logo/Logo";
+import "aos/dist/aos.css";
 
 export const About = ({ data, title, subtitle, subtitle2, ...props }) => {
   const paragraphs = [
@@ -10,13 +11,13 @@ export const About = ({ data, title, subtitle, subtitle2, ...props }) => {
   ];
 
   const Content = paragraphs.map((paragraph, key) => (
-    <div className="m-4" key={key}>
+    <div data-aos="fade-right" className="m-4" key={key}>
       {paragraph}
     </div>
   ));
 
   return (
-    <div className="container mt-7">
+    <div data-aos="fade-up"className="container mt-7">
       <div className="row">
         <div className="col-12 col-lg-4">
           <Logo secondary={true} />

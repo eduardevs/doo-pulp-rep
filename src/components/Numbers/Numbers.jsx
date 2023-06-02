@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from "react";
 export const Numbers = ({ ...props }) => {
   const textRight = "Avec une nouvelle pâte à papier nous pouvons les sauver";
   // const numbers = "220000";
-  const textLeft = "arbres sont abattus par jour.";
+  const textLeft = "arbres sont abattus par jour";
   // let [formatOn, setFormatOn] = useState(false);
   let [numbers, setNumbers] = useState("270");
 

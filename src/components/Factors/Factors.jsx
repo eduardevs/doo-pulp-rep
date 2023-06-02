@@ -21,15 +21,17 @@ export const Factors = ({ data, title, ...props }) => {
       <div className="row mt-6">
         {fact.img && (
           <div
+            data-aos="fade-right"
             className={`order-1 order-lg-${index == 0 ? 1 : 0} col-12 col-lg-6`}
           >
             <img className="img-fluid w-80" src={fact.img} />
           </div>
         )}
         <div
+          data-aos="fade-right"
           className={`order-lg-${index} ${
             index === array.length - 1 ? "" : "col-12 col-lg-6"
-          } p-5`}
+          } p-2 p-lg-5`}
         >
           {index !== array.length - 1 && (
             <li data-aos="fade-right" className="">
