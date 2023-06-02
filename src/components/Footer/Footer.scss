@@ -1,0 +1,25 @@
+@import "../../assets/styles/index.scss";
+
+img.logo-social {
+  width: 10% !important;
+  margin-left: 8px;
+}
+
+a {
+  color: $secondary;
+
+  .ms-20 {
+    margin-left: 12px;
+  }
+
+  &:hover {
+    color: $secondary-dark !important;
+  }
+}
+
+@media (max-width: 500px) {
+  img.logo-social {
+    width: 30% !important;
+    margin-left: 8px;
+  }
+}

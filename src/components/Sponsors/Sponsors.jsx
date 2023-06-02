@@ -1,5 +1,3 @@
-import { useState } from "react";
-// import "./Values.scss";
 import sponsor1 from "../../assets/images/sponsor1.png";
 import sponsor2 from "../../assets/images/sponsor2.png";
 import sponsor3 from "../../assets/images/sponsor3.png";
@@ -7,6 +5,8 @@ import sponsor4 from "../../assets/images/sponsor4.png";
 import sponsor5 from "../../assets/images/sponsor5.png";
 import sponsor6 from "../../assets/images/sponsor6.png";
 import sponsor7 from "../../assets/images/sponsor7.png";
+import "./Sponsors.scss";
+import "aos/dist/aos.css";
 
 export const Sponsors = ({ ...props }) => {
   const title = "Ils nous soutiennent";
@@ -51,9 +51,16 @@ export const Sponsors = ({ ...props }) => {
   const sponsors =
     data &&
     data.map((sponsor) => (
-      <div className="col-12 col-md-6 col-lg-4 justify-content-center d-flex mt-5">
-        <a href={sponsor.link} target="_blank">
-          <img src={sponsor.img} className="" alt={sponsor.name} />
+      <div
+        data-aos="fade-right"
+        className="col-12 col-md-6 col-lg-4 mt-5 sponsor"
+      >
+        <a
+          href={sponsor.link}
+          className="justify-content-center d-flex align-items-center"
+          target="_blank"
+        >
+          <img src={sponsor.img} className="h-custom" alt={sponsor.name} />
         </a>
       </div>
     ));
