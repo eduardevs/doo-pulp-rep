@@ -10,7 +10,7 @@ export const Numbers = ({ ...props }) => {
 
   const myRef = useRef();
   const [refNumbers, setRefNumbers] = useState();
-  console.log(refNumbers);
+  // console.log(refNumbers);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {

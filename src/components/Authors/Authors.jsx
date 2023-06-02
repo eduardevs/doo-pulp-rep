@@ -1,7 +1,7 @@
 import "./Authors.scss";
 import { useEffect } from "react";
 import Aos from "aos";
-// import "aos/dist/aos.css";
+import "aos/dist/aos.css";
 
 export const Authors = ({ data, title, ...props }) => {
   // console.log(typeof authorsProps);
@@ -11,7 +11,7 @@ export const Authors = ({ data, title, ...props }) => {
 
   const authors = data.map((author) => {
     return (
-      <div className="row justify-content-center mb-5 mt-5" key={author.id}>
+      <div className="row justify-content-center mb-5 p-5 mt-6" key={author.id}>
         <div className="col-lg-6 col-12 mt-4 d-flex justify-content-center ">
           {author.img && (
             <img className="img-fluid img-profile" src={author.img} />
@@ -26,8 +26,8 @@ export const Authors = ({ data, title, ...props }) => {
   });
 
   return (
-    <div className="container">
-      <div className="text-center m-5">
+    <div className="container mt-7 mb-5">
+      <div className="text-center">
         <h1 className="title fs-1">{title}</h1>
       </div>
       {authors}

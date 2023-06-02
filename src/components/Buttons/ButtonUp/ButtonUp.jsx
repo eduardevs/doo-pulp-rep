@@ -47,21 +47,21 @@ export const ButtonUp = () => {
     }
     // scrollTop >= 400 ? setDisplayButton(true) : setDisplayButton(false);
     // ! bug il s'affiche pas le button
-    console.log(displayButton);
+    // console.log(displayButton);
 
     if (displayButton) {
       // handleButton();
       // setDisplayButton(false);
-      console.log('"teqsfdq');
+      // console.log('"teqsfdq');
     }
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  console.log(scrollTop);
+  // console.log(scrollTop);
 
   // const handleButton = () => {};
-  console.log(displayButton);
+  // console.log(displayButton);
   return (
     displayButton && (
       <Link
