@@ -33,23 +33,26 @@ export const Factors = ({ data, title, ...props }) => {
             index === array.length - 1 ? "" : "col-12 col-lg-6"
           } p-2 p-lg-5`}
         >
-          {index !== array.length - 1 && (
-            <li data-aos="fade-right" className="">
-              <h2>{index !== array.length - 1 && fact.title}</h2>
-              {index !== array.length - 1 &&
-                fact.descriptions.map((li, i, arr) => (
-                  <div className="fw-bold fs-5">{li}</div>
-                ))}
-            </li>
-          )}
-          {index === array.length - 2 && (
+          {/* {index !== array.length - 1 && ( */}
+          <li data-aos="fade-right" className="">
+            <h2>{fact.title}</h2>
+            {Array.isArray(fact.descriptions) ? (
+              fact.descriptions.map((li, i, arr) => (
+                <div className="fw-bold fs-5">{li}</div>
+              ))
+            ) : (
+              <div className="fw-bold fs-5">{fact.descriptions}</div>
+            )}
+          </li>
+          {/* )} */}
+          {/* {index === array.length - 2 && (
             <li data-aos="fade-right" className=" mt-5">
               <h2>{lastItem[0].title}</h2>
               {lastItem[0].descriptions.map((li, i, arr) => (
                 <div className="fw-bold fs-5">{li}</div>
               ))}
             </li>
-          )}
+          )} */}
         </div>
       </div>
     ));

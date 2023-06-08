@@ -1,9 +1,9 @@
 // import "./Authors.scss";
 
 import { Factors } from "./Factors";
-import Environment from "../../assets/images/factor1.jpg";
-import Social from "../../assets/images/factor2.jpg";
-// import Economique from "../../assets/images/factor3.jpg";
+import Environment from "../../assets/images/factor1.png";
+import Social from "../../assets/images/factor2.png";
+// import Economique from "../../assets/images/factor3.png";
 
 export const FactorsContainer = ({ ...props }) => {
   const facts = [
