@@ -1,8 +1,9 @@
 // import "./Authors.scss";
 
 import { Factors } from "./Factors";
-import Environment from "../../assets/images/nature-path.jpg";
-import Social from "../../assets/images/france-flag.jpg";
+import Environment from "../../assets/images/factor1.png";
+import Social from "../../assets/images/factor2.png";
+// import Economique from "../../assets/images/factor3.png";
 
 export const FactorsContainer = ({ ...props }) => {
   const facts = [
@@ -18,7 +19,7 @@ export const FactorsContainer = ({ ...props }) => {
     {
       title: "Social",
       descriptions: [
-        "Création de l’emploi local dans l’Economie Sociale et Solidaire à travers la création d’une usine de pâte à papier dans                 les Hauts-de-France",
+        "Création de l’emploi local dans l’Economie Sociale et Solidaire à travers la création d’une usine de pâte à papier dans les Hauts-de-France",
       ],
       img: Social,
     },

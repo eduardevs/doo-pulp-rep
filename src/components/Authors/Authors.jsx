@@ -11,22 +11,24 @@ export const Authors = ({ data, title, ...props }) => {
 
   const authors = data.map((author) => {
     return (
-      <div
-        className="row justify-content-center mb-5 pb-5 mt-6 p-5 p-lg-1"
-        key={author.id}
-      >
-        <div
-          data-aos="fade-right"
-          className="col-lg-6 col-12 mt-4 d-flex justify-content-center "
-        >
-          {author.img && (
-            <img className="img-fluid img-profile" src={author.img} />
-          )}
+      <div className="col-lg-6 col-12 m-auto mt-4 d-flex justify-content-center m-auto mb-5">
+        <div key={author.id}>
+          <div className="">
+            {author.name && (
+              <h3 data-aos="fade-right" className="name title text-center fs-2 mb-4">
+                {author.name}
+              </h3>
+            )}
+            {author.img && (
+              <img data-aos="fade-right" className="img-fluid img-profile" src={author.img} />
+            )}
+          </div>
         </div>
-        <div data-aos="fade-right" className="col-lg-6 col-12 mt-4 content">
-          <h3 className="name title fs-2">{author.name}</h3>
-          <p className="description">{author.description}</p>
-        </div>
+        {author.description && (
+          <div data-aos="fade-right" className="col-lg-6 col-12 mt-4 content">
+            <p className="description">{author.description}</p>
+          </div>
+        )}
       </div>
     );
   });
@@ -36,7 +38,7 @@ export const Authors = ({ data, title, ...props }) => {
       <div className="text-center">
         <h1 className="title fs-1">{title}</h1>
       </div>
-      {authors}
+      <div className="row mb-5 pb-5 mt-6 p-5 p-lg-1">{authors}</div>
     </div>
   );
 };

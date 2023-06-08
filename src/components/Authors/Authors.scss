@@ -1,12 +1,17 @@
 .img-profile {
   border-radius: 10%;
-  width: 54%;
+  object-fit: cover;
+  width: 22vw;
+  height: 44vh;
+  object-position: left 23%;
 }
 
-@media (max-width: "768px") {
+@media (max-width: "991px") {
   .img-profile {
-    width: 44%;
-    object-fit: fill;
+    object-fit: cover;
+    width: 400px;
+    height: 400px;
+    object-position: left 23%;
   }
 }
 

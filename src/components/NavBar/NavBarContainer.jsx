@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { NavBarMobile } from "./NavBarMobile";
 import { NavBar } from "./NavBar";
+import { HashLink as Link } from "react-router-hash-link";
 
 export const NavBarContainer = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -20,5 +21,5 @@ export const NavBarContainer = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  return <div>{isMobile ? <NavBarMobile /> : <NavBar />}</div>;
+  return <div>{isMobile ? <NavBarMobile/> : <NavBar></NavBar>}</div>;
 };
