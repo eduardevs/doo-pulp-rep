@@ -7,15 +7,15 @@ export const AuthorsContainer = () => {
     {
       id: 1,
       name: "Daniela",
-      description:
-        "originaire du Venezuela, passionnée de la création et de la conservation de la forêt et sa biodiversité. Designer de produits ecoresponsables et étudiante en Master 2 Entrepreneuriat à l'IAE de Lille.",
+      // description:
+      //   "originaire du Venezuela, passionnée de la création et de la conservation de la forêt et sa biodiversité. Designer de produits ecoresponsables et étudiante en Master 2 Entrepreneuriat à l'IAE de Lille.",
       img: Author1,
     },
     {
       id: 2,
       name: "Théodore",
-      description:
-        "un enfant du Nord, passionné de sciences et très sensible aux enjeux environnementaux. Diplômé d’un master d’intelligence stratégique en R&D et innovation.",
+      // description:
+      //   "un enfant du Nord, passionné de sciences et très sensible aux enjeux environnementaux. Diplômé d’un master d’intelligence stratégique en R&D et innovation.",
       img: Author2,
     },
   ];

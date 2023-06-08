@@ -16,7 +16,17 @@
 .fs-normal {
   font-size: 6rem;
 }
+.logo-container {
+  position: absolute;
+  z-index: 1;
+  width: 200px;
+}
 
-.w-15 {
-  width: 15%;
+@media (max-width: 991px) {
+  .logo-container {
+    position: absolute;
+    z-index: 1;
+    width: 550px;
+    margin-top: -35px;
+  }
 }
