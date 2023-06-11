@@ -1,8 +1,14 @@
 import "./About.scss";
-// import { Logo } from "../Logo/Logo";
+import { Logo } from "../Logo/Logo";
 // import "aos/dist/aos.css";
 
-export const About = ({ data="data", title="example", subtitle="test1", subtitle2= "test2", ...props }) => {
+export const About = ({
+  data = "data",
+  title = "example",
+  subtitle = "test1",
+  subtitle2 = "test2",
+  ...props
+}) => {
   const paragraphs = [
     "Nous souhaitons développer une nouvelle matière première d'origine végétale pour remplacer le bois dans la fabrication industrielle du papier.",
     "Les fibres utilisées pour la fabrication des pâtes à papier seront des dites végétales alternatives (chanvre, bambou, miscanthus, paille de céréales et de colza, canne de maïs et tournesol",
@@ -20,7 +26,7 @@ export const About = ({ data="data", title="example", subtitle="test1", subtitle
     <div className="container mt-7">
       <div className="row">
         <div className="col-12 col-lg-4">
-          {/* <Logo secondary={true} /> */}
+          <Logo secondary={true} />
         </div>
         <div className="col-12 col-lg-6 p-3 ms-md-5">
           <h2 className="subtitle ms-lg-4 ms-xl-0 fs-1">{subtitle}</h2>
